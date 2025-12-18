@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Automated Deployment Using Jenkins, Github Webhooks, and Nginx</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #35424a;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        section {
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #35424a;
+        }
+        h2 {
+            border-bottom: 2px solid #35424a;
+            padding-bottom: 10px;
+        }
+        .content {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+        }
+        .steps {
+            background-color: #e0e0e0;
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 20px;
+        }
+        .step {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: #35424a;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        a {
+            color: #35424a;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1 style="color: white;">AUTOMATED DEPLOYMENT Using Jenkins, Github Webhooks, and Nginx</h1>
+</header>
+
+<section class="content">
+    <h2>Project Overview</h2>
+    <p>This Project demonstrates an automated deployment pipeline that integrates Jenkins for continuous integration, Github Webhooks for triggering builds, and Nginx for reverse proxy management. The purpose of this system is to streamline the deployment process, reducing manual intervention and enhancing productivity in a microservices-based architecture.</p>
+
+    <h2>Tools Used</h2>
+    <ul>
+        <li><strong>Jenkins</strong>: A popular open-source automation server used for building, testing, and deploying code.</li>
+        <li><strong>Github Webhooks</strong>: Used to trigger Jenkins builds whenever changes are made to the repository.</li>
+        <li><strong>Nginx</strong>: A high-performance web server and reverse proxy server used to manage traffic and distribute requests to different microservices.</li>
+        <li><strong>Ngrok</strong>: used to expose local web servers or other services to the internet, making them accessible from anywhere.</li>
+    </ul>
+
+    <h2>System Architecture</h2>
+    <p>The system architecture consists of the following components:</p>
+    <ul>
+        <li><strong>GitHub Repository</strong>: The source of the code, where any push or merge triggers the webhook.</li>
+        <li><strong>Jenkins Server</strong>: Automatically pulls the latest code, runs the build, and deploys the service to the Nginx server.</li>
+        <li><strong>Nginx</strong>: Acts as a reverse proxy, directing traffic to the appropriate microservices running on different ports or Docker containers.</li>
+    </ul>
+
+    <div class="steps">
+        <h2>Steps Involved</h2>
+        <div class="step">
+            <h3>Step 1: Set up GitHub Webhooks</h3>
+            <p>Configure the GitHub webhook to send a POST request to the Jenkins server whenever a push or merge occurs in the repository.</p>
+        </div>
+        <div class="step">
+            <h3>Step 2: Configure Jenkins</h3>
+            <p>Create a Jenkins pipeline to automate the build, test, and deploy processes. The pipeline will pull the latest code from the repository, build the application, and push it to the Nginx server.</p>
+        </div>
+        <div class="step">
+            <h3>Step 3: Nginx Configuration</h3>
+            <p>Set up Nginx as a reverse proxy to handle requests and forward them to the appropriate microservices running on different ports or Docker containers.</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 Automated Deployment Project | Designed by Aafreen Sana</p>
+</footer>
+
+</body>
+</html>
